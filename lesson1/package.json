@@ -1,0 +1,22 @@
+{
+  "name": "lesson1",
+  "version": "1.0.0",
+  "description": "First assignment for CSE 341",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eolsenbyui/CSE341"
+  },
+  "keywords": [
+    "first",
+    "lesson"
+  ],
+  "author": "Eugene C. Olsen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
