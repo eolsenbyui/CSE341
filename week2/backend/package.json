@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for Week 2 assignment",
+  "main": "service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon service.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eolsenbyui/CSE341.git"
+  },
+  "author": "Eugene C. Olsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eolsenbyui/CSE341/issues"
+  },
+  "homepage": "https://github.com/eolsenbyui/CSE341#readme",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1"
+  }
+}

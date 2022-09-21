@@ -1,0 +1,20 @@
+{
+    "professionalName": "Elon Musk",
+    "base64Image": "",
+    "nameLink": {
+        "firstName": "Elon",
+        "url": "https://www.spacex.com",
+    },
+    "primaryDescription": "billionaire",
+    "workDescription1": "Chairman, SpaceX",
+    "workDescription2": "Chairman, Tesla",
+    "linkTitleText": "Link Title",
+    "linkedInLink": {
+        "text": "Elon Musk",
+        "link": "https://www.linkedin.com/in/ElonMusk",
+    },
+    "githubLink" {
+        "text": "Elon's repository",
+        "link": "https://www.github.com/elonmusk",
+    }
+}
