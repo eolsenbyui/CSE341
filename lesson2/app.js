@@ -1,9 +1,24 @@
+require('dotenv').config();
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+
+const db = require('./db');
+
 const port = process.env.PORT || 3000;
 
-app.use('/', require('./routes'))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.listen(port, () => {
-    console.log(`Lesson 2 app running on port ${port}`)
-})
+app.use('/', require('./routes'));
+app.use('/contacts', require('./routes/contacts'));
+
+db.connect((error, database) => {
+    if (error) {
+        console.log(error);
+    } else {
+        app.listen(port, () => {
+            console.log(`Lesson 2 app running on port ${port}, database connected.`);
+        });    
+    }
+});
