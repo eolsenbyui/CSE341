@@ -48,7 +48,7 @@ GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba8
 GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba6
 
 ### Create contact
-POST http://localhost:3000/contacts HTTP/1.1 
+POST https://lesson3-6puz.onrender.com/contacts HTTP/1.1 
 content-type: application/json 
 
 { 
@@ -60,7 +60,7 @@ content-type: application/json
 }
 
 ### Update contact
-PUT http://localhost:3000/contacts/633b39e9de4d2df1e890eb87 HTTP/1.1
+PUT https://lesson3-6puz.onrender.com/contacts/633b4aedda6f377663742440 HTTP/1.1
 content-type: application/json 
 
 { 
@@ -72,5 +72,5 @@ content-type: application/json
 }
 
 ### Delete contact
-DELETE http://localhost:3000/contacts/633b39e9de4d2df1e890eb87 HTTP/1.1
+DELETE https://lesson3-6puz.onrender.com/contacts/633b4aedda6f377663742440 HTTP/1.1
 
