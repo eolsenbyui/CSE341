@@ -8,6 +8,33 @@ GET http://localhost:3000/contacts/632d59efb898631b0bc74ba4
 ### 
 GET http://localhost:3000/contacts/632d59efb898631b0bc74ba8
 
+### Create contact
+POST http://localhost:3000/contacts HTTP/1.1 
+content-type: application/json 
+
+{ 
+    "firstName": "Benjamin", 
+    "lastName": "Franklin", 
+    "email": "bfranklin@junto.org", 
+    "favoriteColor": "cornflower", 
+    "birthday": "1706-01-17" 
+}
+
+### Update contact
+PUT http://localhost:3000/contacts/633b39e9de4d2df1e890eb87 HTTP/1.1
+content-type: application/json 
+
+{ 
+    "firstName": "Thomas", 
+    "lastName": "Jefferson", 
+    "email": "thomasj@monticello.org", 
+    "favoriteColor": "rouge", 
+    "birthday": "1743-04-13" 
+}
+
+### Delete contact
+DELETE http://localhost:3000/contacts/633b39e9de4d2df1e890eb87 HTTP/1.1
+
 // PRODUCTION Deploy 
 ### 
 GET https://lesson2-7zg5.onrender.com/contacts 
@@ -19,3 +46,31 @@ GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba4
 GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba8
 ###
 GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba6
+
+### Create contact
+POST http://localhost:3000/contacts HTTP/1.1 
+content-type: application/json 
+
+{ 
+    "firstName": "Benjamin", 
+    "lastName": "Franklin", 
+    "email": "bfranklin@junto.org", 
+    "favoriteColor": "cornflower", 
+    "birthday": "1706-01-17" 
+}
+
+### Update contact
+PUT http://localhost:3000/contacts/633b39e9de4d2df1e890eb87 HTTP/1.1
+content-type: application/json 
+
+{ 
+    "firstName": "Thomas", 
+    "lastName": "Jefferson", 
+    "email": "thomasj@monticello.org", 
+    "favoriteColor": "rouge", 
+    "birthday": "1743-04-13" 
+}
+
+### Delete contact
+DELETE http://localhost:3000/contacts/633b39e9de4d2df1e890eb87 HTTP/1.1
+
