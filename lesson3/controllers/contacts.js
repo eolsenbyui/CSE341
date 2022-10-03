@@ -82,7 +82,7 @@ putContact = async (request, response) => {
 // DELETE 
 deleteContact = async (request, response) => {
     try {
-        const result = await db.getDb().collection("contacts").deleteOne( { _id: new ObjectId(request.body._id) } );
+        const result = await db.getDb().collection("contacts").deleteOne( { _id: new ObjectId(request.params.id) } );
 
         if (result.deletedCount === 0) {
             response.status(404).send(`_id ${request.body._id} not found.`);
