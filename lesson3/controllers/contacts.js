@@ -12,19 +12,22 @@ postContact = async (request, response) => {
         response.status(500).send(e.message);
     }
 
-    response.status(201).send(contact.insertedId);
+    response.status(201).send(contact);
 }
 
 
 ////////
 // GET
+//
+// Depending on the presence of the id parameter or query,
+// getContacts will return one or all contacts.
 getContacts = async (request, response) => {
     try {
         let id = "";
         let log = false;
 
         if (request.query.id) id = request.query.id;
-        if (request.params.id) id = request.params.id;  // params will take precedence over query if both are present
+        if (request.params.id) id = request.params.id;  // id param will take precedence over id query if both are present
         if (request.query.log) {
             if (request.query.log == "true") log = true;
         }
