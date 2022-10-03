@@ -1,0 +1,21 @@
+// LOCALHOST 
+### 
+GET http://localhost:3000/contacts 
+### 
+GET http://localhost:3000/contacts/632d59efb898631b0bc74ba5 
+### 
+GET http://localhost:3000/contacts/632d59efb898631b0bc74ba4 
+### 
+GET http://localhost:3000/contacts/632d59efb898631b0bc74ba8
+
+// PRODUCTION Deploy 
+### 
+GET https://lesson2-7zg5.onrender.com/contacts 
+### 
+GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba5 
+### 
+GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba4 
+### 
+GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba8
+###
+GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba6
