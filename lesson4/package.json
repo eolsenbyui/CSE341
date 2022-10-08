@@ -1,5 +1,5 @@
 {
-  "name": "lesson3",
+  "name": "lesson4",
   "version": "1.0.0",
   "description": "Week 4 personal assignment and project for CSE 341",
   "main": "app.js",
@@ -16,7 +16,8 @@
   "keywords": [
     "fourth",
     "lesson",
-    "project"
+    "project",
+    "Contacts API"
   ],
   "author": "Eugene C. Olsen",
   "license": "ISC",
