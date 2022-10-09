@@ -7,7 +7,15 @@ postContact = async (request, response) => {
     let contact = {};
 
     try {
-        contact = await db.getDb().collection("contacts").insertOne(request.body);
+        const document = {
+            "firstName": request.body.firstName,
+            "lastName": request.body.lastName,
+            "email": request.body.email,
+            "favoriteColor": request.body.favoriteColor,
+            "birthday": request.body.birthday
+        }
+
+        contact = await db.getDb().collection("contacts").insertOne(document);
     } catch (e) {
         response.status(500).send(e.message);
     }
@@ -77,10 +85,18 @@ getContact = async(request, response) => {
 // PUT
 putContact = async (request, response) => {
     try {
+        const document = {
+            "firstName": request.body.firstName,
+            "lastName": request.body.lastName,
+            "email": request.body.email,
+            "favoriteColor": request.body.favoriteColor,
+            "birthday": request.body.birthday
+        }
+
         const result = await db.getDb().collection("contacts").updateOne(
             { "_id": new ObjectId(request.params.id) },
             { 
-                $set: request.body,
+                $set: document,
                 $currentDate: { lastModified: true }
             });
 
@@ -98,7 +114,7 @@ deleteContact = async (request, response) => {
         const result = await db.getDb().collection("contacts").deleteOne( { _id: new ObjectId(request.params.id) } );
 
         if (result.deletedCount === 0) {
-            response.status(404).send(`_id ${request.body._id} not found.`);
+            response.status(404).send(`_id ${request.params._id} not found.`);
         }
 
         response.send();
