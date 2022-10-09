@@ -13,6 +13,7 @@
   "host": "localhost:3000",
   "basePath": "/contacts",
   "schemes": [
+    "https",
     "http"
   ],
   "paths": {

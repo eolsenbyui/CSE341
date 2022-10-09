@@ -14,7 +14,7 @@ const doc = {
     },
     host: 'localhost:3000',
     basePath: '/contacts',
-    schemes: ['http'],
+    schemes: ['https', 'http'],
 };
 
 const outputFile = './swagger.json';
