@@ -18,7 +18,7 @@ db.connect((error, database) => {
         console.log(error);
     } else {
         app.listen(port, () => {
-            console.log(`Lesson 3 app running on port ${port}, database connected.`);
+            console.log(`Contacts API running on port ${port}, database connected.`);
         });    
     }
 });
