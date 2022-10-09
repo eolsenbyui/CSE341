@@ -1,26 +1,22 @@
-displayName = (request, response) => {
-    let name = {
-        "name": {
-            "last": "Amaya",
-            "first": "Lynnea",
-            "middleInitial": "K"
-        },
-        "relationship": "stepdaughter",
-        "age": 15,
-        "height": "5' 2\"",
-        "weight": "< CONFIDENTIAL >",
+displayInfo = (request, response) => {
+    let info = {
+        "appName": "Contacts API",
+        "documentation": "/api-docs",
+        "course": "CSE 341",
+        "section": "1",
+        "assignment": "Contacts API project",
+        "week": "4"
     };
 
-    let nameString = JSON.stringify(name, null, 3);
+    let infoString = JSON.stringify(info, null, 3);
 
     response.writeHead(200, {
-        "Content-Type": "application/json",
-        "Content-Length": nameString.length,
+        "Content-Type": "application/json"
     });
 
-    response.end(nameString);
+    response.end(infoString);
 }
 
 module.exports = {
-    displayName,
+    displayInfo,
 }
