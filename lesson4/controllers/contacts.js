@@ -19,15 +19,11 @@ postContact = async (request, response) => {
 ////////
 // GET
 //
-// Depending on the presence of the id parameter or query,
-// getContacts will return one or all contacts.
+// getContacts returns all contacts.
 getContacts = async (request, response) => {
     try {
-        let id = "";
         let log = false;
 
-        if (request.query.id) id = request.query.id;
-        if (request.params.id) id = request.params.id;  // id param will take precedence over id query if both are present
         if (request.query.log) {
             if (request.query.log == "true") log = true;
         }
@@ -37,22 +33,39 @@ getContacts = async (request, response) => {
             console.log(`Database name: ${db.getDb().databaseName}`);
         }
 
-        if (id) {
-            const contact = await db.getDb().collection("contacts").findOne({ "_id": new ObjectId(id) });
+        const contacts = await db.getDb().collection("contacts").find().toArray();
 
-            if (log) console.log(`Contact:\n${JSON.stringify(contact, null, 3)}`);
+        if (log) console.log(`Contacts:\n${JSON.stringify(contacts, null, 3)}`);
 
-            if (contact) {
-                response.send(contact);
-            } else {
-                response.status(404).send("404 Record not found");
-            }
+        response.send(contacts);
+    } catch (e) {
+        response.status(500).send(`Invalid ID: ${e.message}`);
+    }
+}
+
+// getContact returns the contact whose ID is passed as a parameter.
+getContact = async(request, response) => {
+    try {
+        const id = request.params.id;;
+        let log = false;
+
+        if (request.query.log) {
+            if (request.query.log == "true") log = true;
+        }
+
+        if (log) {
+            console.log(`ID: \"${id}\"`);
+            console.log(`Database name: ${db.getDb().databaseName}`);
+        }
+
+        const contact = await db.getDb().collection("contacts").findOne({ "_id": new ObjectId(id) });
+
+        if (log) console.log(`Contact:\n${JSON.stringify(contact, null, 3)}`);
+
+        if (contact) {
+            response.send(contact);
         } else {
-            const contacts = await db.getDb().collection("contacts").find().toArray();
-
-            if (log) console.log(`Contacts:\n${JSON.stringify(contacts, null, 3)}`);
-
-            response.send(contacts);
+            response.status(404).send("404 Record not found");
         }
     } catch (e) {
         response.status(500).send(`Invalid ID: ${e.message}`);
@@ -94,9 +107,15 @@ deleteContact = async (request, response) => {
     }
 }
 
+showDocumentation = async (request, response) => {
+
+}
+
 module.exports = {
     postContact,
     getContacts,
+    getContact,
     putContact,
-    deleteContact
+    deleteContact,
+    showDocumentation
 }
