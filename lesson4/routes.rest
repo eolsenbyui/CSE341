@@ -37,18 +37,18 @@ DELETE http://localhost:3000/contacts/633b39e9de4d2df1e890eb87 HTTP/1.1
 
 // PRODUCTION Deploy 
 ### 
-GET https://lesson2-7zg5.onrender.com/contacts 
+GET https://contacts-api-wia3.onrender.com/contacts 
 ### 
-GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba5 
+GET https://contacts-api-wia3.onrender.com/contacts/632d59efb898631b0bc74ba5 
 ### 
-GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba4 
+GET https://contacts-api-wia3.onrender.com/contacts/632d59efb898631b0bc74ba4 
 ### 
-GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba8
+GET https://contacts-api-wia3.onrender.com/contacts/632d59efb898631b0bc74ba8
 ###
-GET https://lesson2-7zg5.onrender.com/contacts/632d59efb898631b0bc74ba6
+GET https://contacts-api-wia3.onrender.com/contacts/632d59efb898631b0bc74ba6
 
 ### Create contact
-POST https://lesson3-6puz.onrender.com/contacts HTTP/1.1 
+POST https://contacts-api-wia3.onrender.com/contacts HTTP/1.1 
 content-type: application/json 
 
 { 
@@ -60,7 +60,7 @@ content-type: application/json
 }
 
 ### Update contact
-PUT https://lesson3-6puz.onrender.com/contacts/633b4aedda6f377663742440 HTTP/1.1
+PUT https://contacts-api-wia3.onrender.com/contacts/633b4aedda6f377663742440 HTTP/1.1
 content-type: application/json 
 
 { 
@@ -72,5 +72,5 @@ content-type: application/json
 }
 
 ### Delete contact
-DELETE https://lesson3-6puz.onrender.com/contacts/633b4aedda6f377663742440 HTTP/1.1
+DELETE https://contacts-api-wia3.onrender.com/contacts/633b4aedda6f377663742440 HTTP/1.1
 
