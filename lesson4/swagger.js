@@ -5,7 +5,12 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
     info: {
         title: 'Contacts API',
-        description: 'Week 1-4 project'
+        description: 'CSE 341 Week 1-4 project',
+        contact: {
+            name: "Eugene C. Olsen",
+            url: "https://www.linkedin.com/in/eugeneolsen",
+            email: "eugeneolsen@byui.edu"
+        }
     },
     host: 'localhost:3000',
     basePath: '/contacts',

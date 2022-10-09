@@ -2,7 +2,12 @@
   "swagger": "2.0",
   "info": {
     "title": "Contacts API",
-    "description": "Week 1-4 project",
+    "description": "CSE 341 Week 1-4 project",
+    "contact": {
+      "name": "Eugene C. Olsen",
+      "url": "https://www.linkedin.com/in/eugeneolsen",
+      "email": "eugeneolsen@byui.edu"
+    },
     "version": "1.0.0"
   },
   "host": "localhost:3000",
