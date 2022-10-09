@@ -3,7 +3,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-const swaggerAutogen = require('swagger-autogen');
 const swaggerUI = require('swagger-ui-express');
 swaggerDocument = require('./swagger.json')
 
