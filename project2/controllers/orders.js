@@ -36,8 +36,29 @@ getOrders = async (request, response) => {
     }
 }
 
+getOrder = async (request, response) => {
+    response.status(501).send("Not yet implemented");
+}
+
+patchOrder = async (request, response) => {
+    response.status(501).send("Not yet implemented");
+}
+
+putOrder = async (request, response) => {
+    response.status(501).send("Not yet implemented");
+}
+
+deleteOrder = async (request, response) => {
+    response.status(501).send("Not yet implemented");
+}
+
+
 
 module.exports = {
     postOrder,
     getOrders,
+    getOrder,
+    patchOrder,
+    putOrder,
+    deleteOrder
 }
