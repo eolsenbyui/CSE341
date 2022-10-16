@@ -1,0 +1,66 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Orders API",
+    "description": "CSE 341 PRoject 2",
+    "contact": {
+      "name": "Eugene C. Olsen",
+      "url": "https://www.linkedin.com/in/eugeneolsen",
+      "email": "eugeneolsen@byui.edu"
+    },
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customerID": {
+                  "example": "any"
+                },
+                "items": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
