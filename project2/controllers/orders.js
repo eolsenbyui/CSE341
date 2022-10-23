@@ -1,5 +1,8 @@
 const { ObjectId } = require('mongodb');
-const db = require('../db');
+const { orders } = require('../models');
+//const db = require('../db');
+const db = require('../models');
+const Order = db.orders;
 
 /////////
 // POST
@@ -28,7 +31,8 @@ postOrder = async (request, response) => {
 // getOrders returns all orders.
 getOrders = async (request, response) => {
     try {
-        const orders = await db.getDb().collection("orders").find().toArray();
+        //const orders = await db.getDb().collection("orders").find().toArray();
+        const orders = await Order.find({});
 
         response.send(orders);
     } catch (e) {
