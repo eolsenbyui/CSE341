@@ -21,7 +21,7 @@ module.exports = (mongoose) => {
                     required: [true, 'Each order must include a customer ID.']
                 },
                 items:  {
-                    [{
+                    type: [{
                         sku: {
                             type: String,
                             required: [true, 'Each item must have a SKU.']
@@ -31,7 +31,7 @@ module.exports = (mongoose) => {
                             min: [1, 'Each item must have a minimum quantity of 1.']
                         }
                     }],
-                    required: true;
+                    required: true,
                     validate: [notEmpty, 'The order must include at least one item.']
                 },
                 status: String
