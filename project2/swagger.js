@@ -3,7 +3,7 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
     info: {
         title: 'Orders API',
-        description: 'CSE 341 PRoject 2',
+        description: 'CSE 341 Project 2',
         contact: {
             name: "Eugene C. Olsen",
             url: "https://www.linkedin.com/in/eugeneolsen",
