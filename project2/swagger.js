@@ -11,7 +11,7 @@ const doc = {
         }
     },
     host: 'project2-olsen.onrender.com',
-    basePath: '/',
+    basePath: '/orders',
     schemes: ['https', 'http'],
 };
 
