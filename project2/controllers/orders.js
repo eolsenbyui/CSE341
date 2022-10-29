@@ -31,7 +31,6 @@ postOrder = async (request, response) => {
 // getOrders returns all orders.
 getOrders = async (request, response) => {
     try {
-        //const orders = await db.getDb().collection("orders").find().toArray();
         const orders = await Order.find({});
 
         response.send(orders);
@@ -40,10 +39,22 @@ getOrders = async (request, response) => {
     }
 }
 
+// getOrder returns one order specified by the ID parameter
 getOrder = async (request, response) => {
-    response.status(501).send("Not yet implemented");
+    try {
+        const id = request.params.id;;
+
+        const order = await Order.findById(id).exec();
+
+        response.send(order);
+    } catch (e) {
+        response.status(500).send(e.message);
+    }
 }
 
+/////////////
+// PATCH
+//
 patchOrder = async (request, response) => {
     response.status(501).send("Not yet implemented");
 }
