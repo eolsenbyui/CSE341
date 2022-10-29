@@ -7,7 +7,6 @@ module.exports = (mongoose) => {
       'order',
         mongoose.Schema(
             {
-                _id: ObjectId,
                 customerID: {
                     type: ObjectId,
                     required: [true, 'You must include a customer ID.']
