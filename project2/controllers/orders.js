@@ -14,12 +14,12 @@ postOrder = async (request, response) => {
         }
 
         order = await Order.create(document);
+
+        response.status(201).send(order);
     }
     catch (e) {
         response.status(500).send(e.message);
     }
-
-    response.status(201).send(order);
 }
 
 ////////
