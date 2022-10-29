@@ -54,7 +54,7 @@ getContacts = async (request, response) => {
 // getContact returns the contact whose ID is passed as a parameter.
 getContact = async(request, response) => {
     try {
-        const id = request.params.id;;
+        const id = request.params.id;
         let log = false;
 
         if (request.query.log) {
