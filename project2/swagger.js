@@ -10,7 +10,7 @@ const doc = {
             email: "eugeneolsen@byui.edu"
         }
     },
-    host: 'localhost:3000',
+    host: 'project2-olsen.onrender.com',
     basePath: '/',
     schemes: ['https', 'http'],
 };
