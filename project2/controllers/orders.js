@@ -1,6 +1,3 @@
-const { ObjectId } = require('mongodb');
-const { orders } = require('../models');
-//const db = require('../db');
 const db = require('../models');
 const Order = db.orders;
 
@@ -16,7 +13,7 @@ postOrder = async (request, response) => {
             "status": request.body.status
         }
 
-        order = await db.getDb().collection("orders").insertOne(document);
+        order = await Order.create(document);
     }
     catch (e) {
         response.status(500).send(e.message);
@@ -54,17 +51,41 @@ getOrder = async (request, response) => {
 
 /////////////
 // PATCH
-//
 patchOrder = async (request, response) => {
     response.status(501).send("Not yet implemented");
 }
 
+////////
+// PUT
 putOrder = async (request, response) => {
-    response.status(501).send("Not yet implemented");
+    //response.status(501).send("Not yet implemented");
+    try {
+        const document = {
+            "customerID": request.body.customerID,
+            "items": request.body.items,
+            "status": request.body.status
+        }
+
+        const order = await Order.findByIdAndUpdate(request.params.id, {$set: document});
+
+        response.status(204).send();
+    }
+    catch (e) {
+        response.status(500).send(e.message);
+    }
 }
 
+///////////
+// DELETE 
 deleteOrder = async (request, response) => {
-    response.status(501).send("Not yet implemented");
+    //response.status(501).send("Not yet implemented");
+    try {
+        const order = await Order.findByIdAndRemove(request.params.id);
+
+        response.send();
+    } catch(e) {
+        response.status(500).send(e.message);
+    }
 }
 
 
