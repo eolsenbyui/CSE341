@@ -11,13 +11,13 @@
     "version": "1.0.0"
   },
   "host": "project2-olsen.onrender.com",
-  "basePath": "/",
+  "basePath": "/orders",
   "schemes": [
     "https",
     "http"
   ],
   "paths": {
-    "/orders": {
+    "/": {
       "post": {
         "description": "",
         "parameters": [
