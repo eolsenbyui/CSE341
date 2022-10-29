@@ -60,7 +60,7 @@ content-type: application/json
 }
 
 ### Update contact
-PUT https://contacts-api-wia3.onrender.com/contacts/633b4aedda6f377663742440 HTTP/1.1
+PUT https://contacts-api-wia3.onrender.com/contacts/634239aba6ad0605cbca43d9 HTTP/1.1
 content-type: application/json 
 
 { 
@@ -72,5 +72,5 @@ content-type: application/json
 }
 
 ### Delete contact
-DELETE https://contacts-api-wia3.onrender.com/contacts/633b4aedda6f377663742440 HTTP/1.1
+DELETE https://contacts-api-wia3.onrender.com/contacts/634239aba6ad0605cbca43d9 HTTP/1.1
 
