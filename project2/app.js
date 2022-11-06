@@ -8,12 +8,12 @@ swaggerDocument = require('./swagger.json')
 
 const port = process.env.PORT || 3000;
 
-//const db = require('./db');
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+app.use('/authorization', require('./routes/auth'));
 app.use('/orders', require('./routes/orders'));
+app.use('/customers', require('./routes/customers'));
 
 const db = require('./models');
 
