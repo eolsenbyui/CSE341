@@ -1,5 +1,3 @@
-//const { Int32 } = require("mongodb");
-
 const { ObjectId } = require("mongodb");
 
 const notEmpty = (items) => {
