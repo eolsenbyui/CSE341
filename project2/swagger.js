@@ -10,13 +10,22 @@ const doc = {
             email: "eugeneolsen@byui.edu"
         }
     },
-    host: 'project2-olsen.onrender.com',
-    basePath: '/orders',
+    host: '',
+    basePath: '/',
     schemes: ['https', 'http'],
+    consumes: ['application/json'],
+    produces: ['application/json'],
+    tags: [{
+        "name": "Orders API",
+        "description": "CSE 341, Project 2"
+    }],
+    securityDefinitions: {
+
+    }
 };
 
 const outputFile = './swagger.json';
-const endpointFiles = ['./routes/orders.js'];
+const endpointsFiles = ['./app.js'];
 
 // Generate output file
-swaggerAutogen(outputFile, endpointFiles, doc);
+swaggerAutogen(outputFile, endpointsFiles, doc);
