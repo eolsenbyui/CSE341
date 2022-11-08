@@ -20,9 +20,20 @@ const doc = {
         "description": "CSE 341, Project 2"
     }],
     securityDefinitions: {
-
-    }
-};
+        Authorization: {
+          type: "apiKey",
+          name: "Authorization",
+          in: "header",
+          description: "Authentication token (Bearer)",
+          example: "Bearer <your token>",
+        },
+      },
+      security: [
+        {
+          Authorization: [],
+        },
+      ],
+    };
 
 const outputFile = './swagger.json';
 const endpointsFiles = ['./app.js'];
